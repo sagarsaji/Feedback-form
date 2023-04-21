@@ -1,0 +1,70 @@
+<div class="bgimage">
+    <div class="container">
+        <h2 class="text-center pt-4">Interview Feedback Form</h2>
+        <br>
+        <div class="mx-auto rounded border gradientclass">
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <h4 class="text-center">Candidate Details</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="candidate-id">ID:</label>
+                        <input type="number" placeholder="Candidate id" class="form-control" [(ngModel)]="feedback.id" id="id" name="id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="candidate-name">Name:</label>
+                        <input type="text" placeholder="Candidate Name" class="form-control" [(ngModel)]="feedback.name" id="name" name="name" required>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4 mx-auto">
+                <h4 class="text-center">Interviewer Details</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="interviewer-name">Name:</label>
+                        <input type="text" placeholder="Interviewer Name" class="form-control" [(ngModel)]="feedback.interviewerName" id="interviewerName" name="interviewerName" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 mx-auto">
+                <h4 class="text-center pt-4">Interview Details</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="interview-date">Date:</label>
+                        <input type="date" class="form-control" [(ngModel)]="feedback.interviewDate" id="interviewDate" name="interviewDate" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="interview-time">Time:</label>
+                        <input type="time" class="form-control" [(ngModel)]="feedback.interviewTime" id="interviewTime" name="interviewTime" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <h4 class="text-center">Status</h4>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="interviewResult" value="selected" [(ngModel)]="feedback.interviewResult" required> Selected
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="interviewResult" value="rejected" [(ngModel)]="feedback.interviewResult"> Rejected
+            </label>
+        </div>
+        </div>
+        <div class="form-group w-75 mx-auto">
+            <label for="feedback-interviewComments">Feedback/Suggestions:</label>
+            <textarea class="form-control" id="interviewComments" name="interviewComments" [(ngModel)]="feedback.interviewComments" rows="5" required></textarea>
+        </div>
+        <div class="text-center form-group">
+            <button type="submit" class="btn btn-primary mt-3" name="submit" value="Register" (click)="submitDetails()">Submit</button>
+        </div>
+        
+    </div>
+    </div>
+</div>
